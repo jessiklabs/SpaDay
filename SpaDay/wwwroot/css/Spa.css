@@ -1,0 +1,37 @@
+﻿body {
+}
+
+#red {
+    background-color: #c90e2a;
+}
+
+#blue{
+    background-color:deepskyblue;
+}
+
+#purple {
+    background-color:rebeccapurple;
+}
+
+#green {
+    background-color:lawngreen;
+}
+
+#orange {
+    background-color:darkorange;
+}
+
+#yellow {
+    background-color:yellow;
+}
+
+.col {
+    position: relative;
+    width: 50%;
+}
+
+    .col:after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
