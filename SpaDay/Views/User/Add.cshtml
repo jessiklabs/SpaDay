@@ -1,0 +1,15 @@
+﻿<h1>Add User Information</h1>
+<form method="post" action="/user">
+    Name:
+    <input type="text" name="name" value="@ViewBag.username"><br>
+    Email: 
+    <input type="email" name="email" value="@ViewBag.email"><br>
+    Password: 
+    <input type="password" name="Password"><br>
+    Verify Password:
+    <input type="password" name="Verify"><br>
+    <p>@ViewBag.error</p>
+    <input type="submit" value="submit">
+
+   
+</form>
