@@ -1,5 +1,7 @@
 ﻿@{
 }
+@using SpaDay.ViewModels;
+@model AddUserViewModel;
 
 <h1>Sign Up Form</h1>
 
@@ -8,16 +10,18 @@
     <p>@ViewBag.error</p>
 }
 
-<form method="post" action="/user">
+<form method="post" action="/user/add">
     Username:
     <br>
     @if (ViewBag.error == null)
     {
         <input type="text" name="username" />
+        <span asp-validation-for="Username"></span>
     }
     else
     {
         <input type="text" name="username" value="@ViewBag.userName" />
+        <span asp-validation-for="Username"></span>
     }
     <br>
     Email:
@@ -33,10 +37,12 @@
     <br>
     Password:
     <input type="password" name="password" />
+    <span asp-validation-for="Password"></span>
     <br>
     Confirm Password:
     <br>
-    <input type="password" name="verify" />
+    <input type="password" name="VerifyPassword" />
+    <span asp-validation-for="VerifyPassword"></span>
     <br>
     <input type='submit' value='Submit'>
 </form>
