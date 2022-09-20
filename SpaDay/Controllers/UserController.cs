@@ -21,7 +21,8 @@ namespace SpaDay.Controllers
 
         public IActionResult Add()
         {
-            return View();
+            AddUserViewModel addUserViewModel = new AddUserViewModel();
+            return View(addUserViewModel);
         }
 
         [HttpPost]
